@@ -1,0 +1,21 @@
+name: CD
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+    deliver:
+        runs-on: ubunto-latest
+
+        steps:
+            - name: Simulando CD
+              uses: actions/upload-artifact@v4
+              with:
+                name: my-artifact
+                path: |
+                   HelloWorldDevOps.html
+                   README.md
+
+            
