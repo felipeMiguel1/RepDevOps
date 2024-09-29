@@ -1,4 +1,5 @@
-# Função para realizar a operação
+# calculadora.py
+
 def calculadora(num1, num2, operador):
     if operador == '+':
         return num1 + num2
@@ -14,15 +15,15 @@ def calculadora(num1, num2, operador):
     else:
         return "Operador inválido!"
 
-# Menu de operação
-print("Calculadora Simples")
-print("Operações disponíveis: +, -, *, /")
+# Função principal separada para rodar a calculadora
+def main():
+    print("Calculadora Simples")
+    print("Operações disponíveis: +, -, *, /")
+    num1 = float(input("Digite o primeiro número: "))
+    operador = input("Digite o operador (+, -, *, /): ")
+    num2 = float(input("Digite o segundo número: "))
+    resultado = calculadora(num1, num2, operador)
+    print(f"Resultado: {num1} {operador} {num2} = {resultado}")
 
-# Receber os números e o operador do usuário
-num1 = float(input("Digite o primeiro número: "))
-operador = input("Digite o operador (+, -, *, /): ")
-num2 = float(input("Digite o segundo número: "))
-
-# Chamar a função de cálculo e exibir o resultado
-resultado = calculadora(num1, num2, operador)
-print(f"Resultado: {num1} {operador} {num2} = {resultado}")
+if __name__ == "__main__":
+    main()
