@@ -1,16 +1,16 @@
-from calculadora import *
+from calculadora import calculadora
 
-def test_calculadora_soma():
-    assert calculadora(1, 1, '+') == 2
-    
+def test_adicao():
+    assert calculadora(5, 3, '+') == 8
 
-def test_calculadora_sub():
-    assert calculadora(3, 2, '-') == 1
+def test_subtracao():
+    assert calculadora(5, 3, '-') == 2
 
+def test_multiplicacao():
+    assert calculadora(5, 3, '*') == 15
 
-def test_calculadora_multiplicacao():
-    assert calculadora(5, 5, '*') == 25
+def test_divisao():
+    assert calculadora(6, 3, '/') == 2
 
-
-def test_calculadora_divisao():
-    assert calculadora(10, 2, '/') == 5
+def test_divisao_por_zero():
+    assert calculadora(6, 0, '/') == "Erro! Divisão por zero."
